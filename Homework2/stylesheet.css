@@ -1,0 +1,18 @@
+h1 {text-align:center; font-family:Freestyle Script; font-size:80px ;
+    text-weight:1000; margin-top: 0; margin-bottom: 0}
+h2 {text-align:center; font-family:Freestyle Script; text-weight:800;
+    font-size: 50px; margin-top: 0; margin-bottom: 20px}
+body {background-color:rgba(185,169,164,.5); padding-left: 50px;
+    padding-right: 50px}
+ul {list-style-type: none; margin: 0; padding: 0; overflow: hidden;
+    background-color: rgb(131,25,25);}
+li {float: left; font-family:MV Boli; font-size: 25px;
+    margin-left: 10px; margin-right: 10px; margin-top: 0; margin-bottom: 0}
+li a {display: block; color: white; text-align: center; padding: 14px 16px;
+    text-decoration: none; font-weight: 900}
+li a:hover {background-color: #FFE900; color: #000; font-weight: 900}
+footer {font-family: MV Boli; font-size: 20px; background-color: rgb(131,25,25);
+    color:#FFFFFF; text-align: right; padding-right: 30px; padding-top: 10px;
+    padding-bottom: 10px; line-height: 1.5}
+.menu{margin-left: 80px; font-size: 17px}
+.button{text-align: center}

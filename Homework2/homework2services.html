@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="stylesheet.css">
+    <style>
+        h3 {text-align: center; font-size: 25px; font-family: MV Boli;
+        padding-bottom: 0; font-weight: 900}
+        label {padding-left: 10px;}
+        th {width: 50%}
+    </style>
+    <title>Wasabi: Chinese and Japanese Restaurant</title>
+</head>
+<header>
+    <h1>Wasabi</h1>
+    <h2>Authentic Chinese and Japanese Cuisine: Order your take-out now!</h2>
+    <nav>
+        <ul>
+          <li><a href="homework2home.html">Home</a></li>
+          <li><a href="homework2services.html">Menu</a></li>
+          <li><a href="homework2contact.html">Contact Us</a></li>
+        </ul>
+    </nav>
+</header>
+<body>
+<h3>Order now! Pickup your food To-Go or make a reservation for In-Person dining!</h3>
+    <form action='#' method='get'>
+        <label>First Name: </label> <input type='text' name='name' id='FName' required='1'>
+        <label>Last Name: </label> <input type='text' name='name' id='LName'required='1'>
+        <br> <br>
+        <label>Phone Number: </label> <input type='text' name='phone' id='phoneNum' required='1'>
+        <br> <br>
+        Order Type:
+        <br>
+        <input type="radio" name="order" value="option1" required='1'> Pickup
+        <input type="radio" name="order" value="option2"> In-Dining
+        <br><br>
+        <table style="width:100%">
+            <tr>
+             <th colspan='4'><h3 style="margin-top:10px; margin-bottom:10px">For Take-Out Orders:</h3></th>
+             <th colspan='3'><h3 style="margin-top:10px; margin-bottom:10px">For Dine-In Orders:</h3></th>
+           </tr>
+           <tr style="text-align:center">
+               <td colspan='4'>Pickup Date
+                   (MM/DD/YYYY): <input type='text' name='date' id='Pdate'>
+               </td>
+               <td colspan='3'>Reservation Date
+                   (MM/DD/YYYY): <input type='text' name='date' id='Rdate'>
+               </td>
+           </tr>
+           <tr>
+               <td style="text-align:center">Pick up Time:</td>
+               <td><input type="radio" name="resTime" value="timeAM">12:00<br>
+                <input type="radio" name="resTime" value="timePM">1:00<br>
+                <input type="radio" name="resTime" value="timeAM">2:00<br>
+                 <input type="radio" name="resTime" value="timePM">3:00<br>
+                 <input type="radio" name="resTime" value="timeAM">4:00<br>
+                 <input type="radio" name="resTime" value="timeAM">6:00<br>
+               </td>
+               <td><input type="radio" name="resTime" value="timeAM">7:00<br>
+                <input type="radio" name="resTime" value="timePM">8:00<br>
+                <input type="radio" name="resTime" value="timeAM">9:00<br>
+                 <input type="radio" name="resTime" value="timePM">10:00<br>
+                 <input type="radio" name="resTime" value="timeAM">11:00<br>
+               </td>
+               <td><input type="radio" name="time12H" value="timeAM">AM
+               <br><input type="radio" name="time12H" value="timePM">PM</td>
+               <td style="text-align:center">Time of Reservation:</td>
+               <td><input type="radio" name="resTime" value="timeAM">12:00-2:00 <br>
+                <input type="radio" name="resTime" value="timePM">2:00-4:00 <br>
+                <input type="radio" name="resTime" value="timeAM">4:00-6:00 <br>
+                 <input type="radio" name="resTime" value="timePM">6:00-8:00 <br>
+                 <input type="radio" name="resTime" value="timeAM">10:00-12:00 <br>
+                </td>
+               </td>
+               <td><input type="radio" name="time12H" value="timeAM">AM
+               <br><input type="radio" name="time12H" value="timePM">PM</td>
+           </tr>
+         </table>
+        <h3>Appetizers:</h3>
+        <div class="menu">
+        <input type="checkbox" name="app" value="fDumpling">Fried Dumplings, 8ct ($6.99)
+        <br><input type="checkbox" name="app" value="sDumpling">Steamed Dumplings, 8ct ($5.99)
+        <br><input type="checkbox" name="app" value="small">Gyoza, 6ct ($4.99)
+        <br><input type="checkbox" name="app" value="medium">Egg roll ($1.50)
+        <br><input type="checkbox" name="app" value="large">Shu mai ($5.99)
+        <br><input type="checkbox" name="app" value="large">Lettuce Wraps ($8.99)
+        </div>
+        <h3>Chinese:</h3>
+        <div class="menu">
+        <input type="checkbox" name="cFood" value="vRice">Vegetable Fried Rice ($6.99)
+        <br><input type="checkbox" name="cFood" value="cRice">Chicken Fried Rice ($7.99)
+        <br><input type="checkbox" name="cFood" value="sRice">Shrimp Fried Rice ($8.99)
+        <br><input type="checkbox" name="cFood" value="vMein">Vegetable Lo Mein ($7.99)
+        <br><input type="checkbox" name="cFood" value="pMein">Pork Lo Mein ($8.99)
+        <br><input type="checkbox" name="cFood" value="plainMein">Plain Lo Mein ($5.99)
+        <br><input type="checkbox" name="cFood" value="sMangoC">Steamed Mango Chicken ($10.99)
+        <br><input type="checkbox" name="cFood" value="fMangoC">Fried Mango Chicken ($10.99)
+        <br><input type="checkbox" name="cFood" value="teriyaki">Chicken Teriyaki ($10.99)
+        <br><input type="checkbox" name="cFood" value="general">General Tso's chicken ($10.99)
+        </div>
+        <h3>Japanese:</h3>
+        <div class="menu">
+        <input type="checkbox" name="jFood" value="fDumpling">Vegetable Sushi, 6ct ($6.99)
+        <br><input type="checkbox" name="jFood" value="sDumpling">Cooked Sushi, 6ct ($5.99)
+        <br><input type="checkbox" name="jFood" value="small">Sashimi, 15ct ($15.99)
+        <br><input type="checkbox" name="jFood" value="medium">Sashimi Deluxe, 22ct ($30.99)
+        <br><input type="checkbox" name="jFood" value="large">California Roll ($5.99)
+        <br><input type="checkbox" name="jFood" value="fDumpling">Sweet Potato Roll ($6.99)
+        <br><input type="checkbox" name="jFood" value="sDumpling">Tuna Roll ($5.99)
+        <br><input type="checkbox" name="jFood" value="small">Spicy Tuna Roll ($6.99)
+        <br><input type="checkbox" name="jFood" value="medium">Spicy Salmon Roll ($5.99)
+        <br><input type="checkbox" name="jFood" value="large">Spicy Yellowtail Roll ($5.99)
+    </div>
+        <h3>Drinks:</h3>
+        <table style="margin-left:60px;">
+            <tr>
+             <td>Water:</td>
+             <td><input type="checkbox" name="type" value="spring">Spring
+             <br>
+             <input type="checkbox" name="type" value="sparkling">Sparkling
+             </td>
+             <td><input type="radio" name="size" value="small">Small ($0.75)</td>
+             <td><input type="radio" name="size" value="medium">Medium ($1.25)</td>
+             <td><input type="radio" name="size" value="large">Large ($1.50)</td>
+           </tr>
+           <tr>
+            <td>Soda (cola):</td>
+            <td><input type="checkbox" name="type" value="cola">Cola
+            <br>
+            <input type="checkbox" name="type" value="orange">Orange Soda
+            <br>
+            <input type="checkbox" name="type" value="ginger">Ginger Ale
+            <br>
+            <input type="checkbox" name="type" value="lemon">Lemon-Lime
+            </td>
+            <td><input type="radio" name="size" value="small">Small ($1.25)</td>
+            <td><input type="radio" name="size" value="medium">Medium ($1.50)</td>
+            <td><input type="radio" name="size" value="large">Large ($2.00)</td>
+          </tr>
+          <tr>
+           <td>Juice:</td>
+           <td><input type="checkbox" name="type" value="apple">Apple
+           <br>
+           <input type="checkbox" name="type" value="orange">Orange
+           <br>
+           <input type="checkbox" name="type" value="cranberry">Cranberry
+           <br>
+           <input type="checkbox" name="type" value="lemonade">Lemonade
+           <br>
+           <input type="checkbox" name="type" value="pinkLemon">Pink lemondade
+           </td>
+           <td><input type="radio" name="size" value="small">Small ($1.25)</td>
+           <td><input type="radio" name="size" value="medium">Medium ($1.50)</td>
+           <td><input type="radio" name="size" value="large">Large ($2.00)</td>
+         </tr>
+         </table>
+        <div class="button">
+        <input style="align:center" type="submit" value="Submit">
+        </div>
+        <br><br>
+</body>
+<footer>
+    Copyright: Wasabi Un-Real Restaurant
+    <br>
+    Visit us at: 1655 S. Downtown Road
+    <br>
+    Medford, MA 02155
+</footer>
+</html>
