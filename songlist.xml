@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/css" href="xmlstyle.css" ?>
+<songList>
+    <song>
+        <artist>Sergei Rachmaninoff</artist>
+        <songTitle>"Piano Concerto No. 2 in C Minor"</songTitle>
+        <genre>Classical</genre>
+        <year>1901</year>
+    </song>
+    <song>
+        <artist>Carrie Underwood</artist>
+        <songTitle>"Before He Cheats"</songTitle>
+        <genre>Country</genre>
+        <year>2005</year>
+    </song>
+    <song>
+        <artist>Jayme Dee</artist>
+        <songTitle>"Till I Fall Asleep"</songTitle>
+        <genre>Pop</genre>
+        <year>2013</year>
+    </song>
+    <song>
+        <artist>Blackalicious</artist>
+        <songTitle>"Alphabet Aerobics"</songTitle>
+        <genre>Rap</genre>
+        <year>1999</year>
+    </song>
+    <song>
+        <artist>Panic! At the Disco</artist>
+        <songTitle>"I Write Sins Not Tragedies"</songTitle>
+        <genre>Alternative Rock</genre>
+        <year>2005</year>
+    </song>
+    <song>
+        <artist>AC/DC</artist>
+        <songTitle>"Highway to Hell"</songTitle>
+        <genre>Rock</genre>
+        <year>1979</year>
+    </song>
+    <song>
+        <artist>Ben Platt</artist>
+        <songTitle>"Waving Through a Window"</songTitle>
+        <genre>Musical Theatre</genre>
+        <year>2017</year>
+    </song>
+    <song>
+        <artist>Gloria Gaynor</artist>
+        <songTitle>"I Will Survive"</songTitle>
+        <genre>Disco</genre>
+        <year>1978</year>
+    </song>
+    <song>
+        <artist>Luis Fonsi</artist>
+        <songTitle>"Despacito"</songTitle>
+        <genre>Reggaeton</genre>
+        <year>2019</year>
+    </song>
+    <song>
+        <artist>Miles Davis</artist>
+        <songTitle>"Flamenco Sketches"</songTitle>
+        <genre>Jazz</genre>
+        <year>1959</year>
+    </song>
+</songList>
