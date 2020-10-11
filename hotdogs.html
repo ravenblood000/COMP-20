@@ -1,0 +1,32 @@
+<!doctype html>
+<html>
+<head>
+    <style>
+    p {align:block}
+    </style>
+</head>
+<body>
+    <script language="javascript">
+    var hotdogs = prompt("How many hot dogs?", "1");
+    var fries = prompt("How many fries?", "1");
+    var sodas = prompt("How many sodas?", "1");
+    var hotdogsP = hotdogs * 3.25;
+    var friesP = fries * 2;
+    var sodasP = sodas * 1.5;
+    var subtotal = hotdogsP + friesP + sodasP;
+    document.writeln("<h1>Welcome to Joe's Hot Dogs!</h1>");
+    document.writeln("<h2>Your order:</h2>");
+    document.writeln("<p># Hot dogs: " + hotdogs + " at $3.25 is $" + hotdogsP.toFixed(2) + ".</p>");
+    document.writeln("<p># Fries: " + fries + " at $2.00 is $" + friesP.toFixed(2) + ".</p>");
+    document.writeln("<p># Sodas: " + sodas + " at $1.50 is $" + sodasP.toFixed(2) + ".</p>");
+    if (subtotal > 20){
+        document.writeln("<p>You qualify for our 10% off discount!</p>");
+        subtotal = subtotal*0.9;
+    }
+    document.writeln("<p>Subtotal: $" + subtotal.toFixed(2) + ".</p>");
+    var tax = 0.0625*subtotal;
+    document.writeln("<p>Food tax: $" + tax.toFixed(2) + ".</p>");
+    document.writeln("<p>Total: $" + (subtotal + tax).toFixed(2) + ".</p>");
+    </script>
+</body>
+</html>
