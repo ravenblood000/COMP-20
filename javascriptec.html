@@ -1,0 +1,36 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+
+<script language="javascript">
+    function switchit()
+    {
+        leftBox = document.getElementById("left");
+        rightBox = document.getElementById("right");
+        button = document.getElementById("btnl");
+        if(button.value == "->")
+        {
+            temp = rightBox.value;
+            rightBox.value = leftBox.value;
+            leftBox.value = temp;
+            button.value = "<-";
+        }
+        else
+        {
+            temp = leftBox.value;
+            leftBox.value = rightBox.value;
+            rightBox.value = temp;
+            button.value = "->";
+        }
+    }
+</script>
+</head>
+<body>
+    <input type="text" value="Place text here!" id="left">
+    <input type = "button" onclick="switchit()"
+    value="->" id="btnl">
+    <input type="text" value="" id="right">
+
+</body>
+</html>
