@@ -1,0 +1,115 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+
+<script language="javascript">
+function isFactor(number, factor)
+{
+    remainder = number % factor;
+    if (remainder == 0)
+    {
+        /*document.getElementById("factors").innerHTML =
+            factor " is a factor of " + number;*/
+        return true;
+    }
+    else
+    {
+        /*document.getElementById("factors").innerHTML =
+            factor " is not a factor of " + number;*/
+        return false;
+    }
+}
+function showArray(array)
+{
+    stringArray = "";
+    for (var i = 0; i < array.length; i++)
+    {
+        stringArray += array[i] + " ";
+    }
+    document.getElementById("factors").innerHTML += stringArray;
+}
+function addArray(allNums)
+{
+    sum = 0
+    for (var i = 0; i < allNums.length; i++)
+    {
+        sum += allNums[i];
+    }
+    return sum;
+}
+function getFactors(number)
+{
+    factors = [];
+    for (var i = 1; i <= (number / 2); i++)
+    {
+        if (isFactor(number, i))
+            factors[factors.length] = i;
+    }
+    return factors;
+}
+window.onload = function()
+{
+    document.getElementById("button").onclick =
+        function()
+        {
+            //Reset all div values
+            document.getElementById("input").innerHTML = "";
+            document.getElementById("factors").innerHTML = "";
+            document.getElementById("results").innerHTML = "";
+
+            //Read in and display numbers
+            num1 = document.numbers.first.value;
+            num2 = document.numbers.second.value;
+            document.getElementById("input").innerHTML =
+                "First number: " + num1 + "<br>Second number: " + num2;
+
+            /*isFactor function test code
+            document.getElementById("results").innerHTML += isFactor(1, 1);
+            document.getElementById("results").innerHTML += isFactor(1, 10);*/
+
+            /*showArray function test code
+            fruits = ["Apple", "Banana", "Coconut"];
+            showArray(fruits);*/
+
+            /*getFactors function test code
+            document.getElementById("results").innerHTML += showArray(getFactors(10));
+            document.getElementById("results").innerHTML += showArray(getFactors(25));
+            document.getElementById("results").innerHTML += showArray(getFactors(100));*/
+
+
+            //Find and display all factors of both numbers
+            document.getElementById("factors").innerHTML += "Factors of first number: ";
+            factors1 = getFactors(num1);
+            showArray(factors1);
+            document.getElementById("factors").innerHTML += "<br>Factors of second number: ";
+            factors2 = getFactors(num2);
+            showArray(factors2);
+
+            /*addArray function test code
+            nums = [10, 4, 3, 6, 24, 13, 63, 2];
+            document.getElementById("results").innerHTML += addArray(nums);*/
+
+            sum1 = addArray(factors1);
+            sum2 = addArray(factors2);
+            document.getElementById("results").innerHTML += num1 + " and " + num2 + " are";
+            if ((sum1 != num2) || (sum2 != num1))
+                 document.getElementById("results").innerHTML += " not";
+            document.getElementById("results").innerHTML += " amicable.";
+        }
+}
+</script>
+</head>
+<body>
+    <form name="numbers">
+    First number: <input type="text" value="220" name="first">
+    <br />
+    Second number: <input type="text" value="284" name="second">
+    <br />
+    <input type = "button" value="Amicable?" id="button">
+    </form>
+    <div id="input"></div>
+    <div id="factors"></div>
+    <div id="results"></div>
+</body>
+</html>
