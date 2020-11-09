@@ -1,0 +1,71 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<style>
+    p {font-weight:bold;
+        font-size: 22px;
+        margin-bottom: 5px;
+    }
+</style>
+<script language="javascript">
+window.onload = function ()
+{
+    request = new XMLHttpRequest();
+    request.open("GET", "https://sheetlabs.com/IND/vs?word=rajan*", true)
+    request.onreadystatechange = function()
+    {
+        if (request.readyState == 4 && request.status == 200)
+        {
+            stringified = request.responseText;
+            words = JSON.parse(stringified);
+            results = 'Words in Vedic literature beginning with "rajan": ';
+            words.forEach(
+                function (index)
+                {
+                    results += "<p>" + index.word + "</p>Nagari: " +
+                    index.nagari + "<br>Description: " + index.description
+                    + "<br>Category: " + index.category;
+                }
+            );
+            document.getElementById("data").innerHTML = results;
+        } // end of if ready state function
+    } // end of state change function
+    request.send();
+} // end of onload function
+</script>
+</head>
+
+<body>
+<div id="data">Loading...</div>
+<br>
+<ol>
+    <li>The API that I selected is a dictionary database for vocabulary used in
+        Vedic literature, or in other words, vocabulary from the Vedas--ancient
+        Sanskrit texts, considered to be some of the primary scriptures of Hinduism.
+    </li>
+    <li>This website this data was found at is
+        <a href="https://aninditabasu.github.io/indica/html/vs.html">
+        https://aninditabasu.github.io/indica/html/vs.html</a>
+    </li>
+    <li>This API request did not require an API key, but the search required
+        that either the word, the description, or the category of the word to
+        be specified. Partial searches were also acceptable, like the one that
+        I did, where I searched for words beginning with "rajan-". By changing
+        the key-value pair at the end of the URL, I could search for words
+        related to the nobility with "category=royalty", or words referring to
+        a king with "description=king", or a specific word with
+        "word=rajakartri".
+    <li>I think one application where this API would be helpful is a historian
+        or a linguist interested in studying the language, since the API also
+        includes the original Nagari script, so it might be referenced for
+        translation or comparison to other languages.
+        <br>
+        I think another way this might be useful is for someone trying to read
+        the original Vedas manuscripts or wants to know if a modern word were
+        present in them, it could be a useful tool for quickly finding simple,
+        synonymous definitions of words that they don't understand or can't
+        translate.
+    </li>
+</body>
+</html>

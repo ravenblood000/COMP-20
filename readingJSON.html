@@ -1,0 +1,73 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<script src="https://code.jquery.com/jquery-3.1.1.min.js"
+    integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+    crossorigin="anonymous">
+</script>
+<style>
+    p {font-weight:bold;
+        font-size: 22px;
+        margin-bottom:5px
+    }
+</style>
+<script language="javascript">
+$.get( "https://ravenblood000.github.io/COMP-20/setList.json",
+    function(data)
+    {
+        stringified = JSON.stringify(data);
+        document.getElementById("rawData").innerHTML = stringified;
+        allSongs = "";
+        songList = JSON.parse(stringified);
+        songList.forEach(
+        function(song)
+            {
+              allSongs += "<p>" + song.title + "</p>Artist: "
+              + song.artist + "<br>Genre: " + song.genre + "<br>Released in "
+              + song.year;
+          }
+        ); // end of .forEach function
+        document.getElementById("results").innerHTML = allSongs;
+    } // end of .get function
+); // end of .get method
+$(document).ready(function()
+{
+    $("#submit").click(function()
+    {
+        $.get( "https://ravenblood000.github.io/COMP-20/setList.json",
+        function(data)
+        {
+            filtered = "";
+            data.forEach(function(song)
+                {
+
+                    if ($("#genres").val() == song.genre)
+                    {
+                        filtered += "<p>" + song.title + "</p>Artist: "
+                        + song.artist + "<br>Genre: " + song.genre + "<br>Released in "
+                        + song.year + "</p>";
+                    }
+              }); // end of .forEach function
+              $("#results").html(filtered);
+        }); // end of .get event handler
+    }); // end of submit click event handler
+}); // end of doc ready event handler
+</script>
+</head>
+
+<body>
+    <h1>Raw Stringified Data</h1>
+    <div id="rawData">&nbsp;</div>
+    <br>
+    <select id="genres">
+        <option value="Country">Country</option>
+        <option value="Classical">Classical</option>
+        <option value="Rap">Rap</option>
+        <option value="Rock">Rock</option>
+        <option value="Reggaeton">Reggaeton</option>
+    </select>
+    <input type="button" id="submit" value="Filter">
+    <div id="results">&nbsp;</div>
+</body>
+</html>
