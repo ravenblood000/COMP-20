@@ -1,0 +1,62 @@
+[
+    {
+    "artist": "Sergei Rachmaninoff",
+    "title": "Piano Concerto No. 2",
+    "genre": "Classical",
+    "year": 1901
+},
+    {
+    "artist": "Carrie Underwood",
+    "title": "Before He Cheats",
+    "genre": "Country",
+    "year": 2005
+},
+    {
+    "artist": "Jayme Dee",
+    "title": "Till I Fall Asleep",
+    "genre": "Country",
+    "year": 2013
+},
+    {
+    "artist": "Blackalicious",
+    "title": "Alphabet Aerobics",
+    "genre": "Rap",
+    "year": 1999
+},
+    {
+    "artist": "Panic! At the Disco",
+    "title": "I Write Sins Not Tragedies",
+    "genre": "Rock",
+    "year": 2005
+},
+    {
+    "artist": "AC/DC",
+    "title": "Highway to Hell",
+    "genre": "Rock",
+    "year": 1979
+},
+    {
+    "artist": "Thomas Rhett",
+    "title": "Marry Me",
+    "genre": "Country",
+    "year": 2017
+},
+    {
+    "artist": "Dan + Shay",
+    "title": "19 You + Me",
+    "genre": "Country",
+    "year": 2015
+},
+    {
+    "artist": "Luis Fonsi",
+    "title": "Despacito",
+    "genre": "Reggaeton",
+    "year": 2019
+},
+    {
+    "artist": "Ludwig Van Beethoven",
+    "title": "Symphony No. 9",
+    "genre": "Classical",
+    "year": 1824
+}
+]
