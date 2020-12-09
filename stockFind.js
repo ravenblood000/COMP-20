@@ -10,6 +10,7 @@ http.createServer(function (req, res)
   var qobj = url.parse(req.url, true).query;
   var text = qobj.search;
   res.write("The search value is " + text);
+  
   MongoClient.connect(MongoURL, { useUnifiedTopology: true }, function(err, db)
   {
     if(err) {console.log("Connection err: " + err); return;}
@@ -19,8 +20,6 @@ http.createServer(function (req, res)
       db.close();
     });  //end find		
   });  //end connect
-
-
 
   res.end();
 }).listen(port);
