@@ -2,10 +2,10 @@
     "name": "helloapp",
     "version": "1.0.0",
     "description": "node app ",
-    "main": "hello.js",
+    "main": "stockFind.js",
     "scripts":
     {
-        "start": "node hello.js"
+        "start": "node stockFind.js"
     },
     "repository":
     {
