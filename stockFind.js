@@ -11,7 +11,7 @@ http.createServer(function (req, res)
   var text = qobj.search;
   res.write("The search value is " + text);
   
-  /* MongoClient.connect(MongoURL, { useUnifiedTopology: true }, function(err, db)
+  MongoClient.connect(MongoURL, { useUnifiedTopology: true }, function(err, db)
   {
     if(err) {console.log("Connection err: " + err); return;}
       var dbo = db.db("HW12");
@@ -20,7 +20,6 @@ http.createServer(function (req, res)
       db.close();
     });  //end find		
   });  //end connect
-  */
 
   res.end();
 }).listen(port);
