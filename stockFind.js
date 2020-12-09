@@ -2,7 +2,7 @@ var http = require('http');
 var url = require('url');
 var port = process.env.PORT || 3000;
 const MongoClient = require('mongodb').MongoClient;
-const MongoURL = "mongodb+srv://23lalickerk:Bobbin101!@cluster0.cetrw.mongodb.net/HW12?retryWrites=true&w=majority";
+const MongoURL = "mongodb+srv://23lalickerk:Bobbin101!@cluster0.cl1u9.mongodb.net/?retryWrites=true&w=majority";
 
 http.createServer(function (req, res)
 {
@@ -14,8 +14,8 @@ http.createServer(function (req, res)
   MongoClient.connect(MongoURL, { useUnifiedTopology: true }, function(err, db)
   {
     if(err) {console.log("Connection err: " + err); return;}
-      var dbo = db.db("HW12");
-      var coll = dbo.collection("companies");
+      //var dbo = db.db("HW12");
+      //var coll = dbo.collection("companies");
 
       db.close();
     });  //end find		
