@@ -13,12 +13,11 @@ http.createServer(function (req, res)
   
   MongoClient.connect(MongoURL, { useUnifiedTopology: true }, function(err, db)
   {
-    //if(err) {console.log("Connection err: " + err); return;}
-      //var dbo = db.db("HW12");
-      //var coll = dbo.collection("companies");
+    if(err) {console.log("Connection err: " + err); return;}
+      var dbo = db.db("HW12");
+      var coll = dbo.collection("companies");
 
-      //db.close();
-    //});  //end find		
+      db.close();		
   });  //end connect
 
   res.end();
