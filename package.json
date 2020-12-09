@@ -2,7 +2,7 @@
     "name": "helloapp",
     "version": "1.0.0",
     "description": "node app ",
-    "main": "stockFind.js",
+    "main": "stockTicker.html",
     "scripts":
     {
         "start": "node stockFind.js"
