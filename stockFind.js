@@ -18,9 +18,10 @@ http.createServer(function (req, res)
       var dbo = db.db("HW12");
       var coll = dbo.collection("companies");
       res.write("Kill me");
+      res.end("End");
       db.close();		
   });  //end connect
 
   // search after connection?
-  res.end("End");
+
 }).listen(port);
