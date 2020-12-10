@@ -12,16 +12,13 @@ http.createServer(function (req, res)
   var qobj = url.parse(req.url, true).query;
   text = qobj.search;
   
-  MongoClient.connect(MongoURL, { useUnifiedTopology: true }, function(err, db)
+  MongoClient.connect(MongoURL, {useUnifiedTopology: true}, function(err, db)
   {
     if(err) {console.log("Connection err: " + err); return;}
       var dbo = db.db("HW12");
       var coll = dbo.collection("companies");
-      res.write("Kill me");
-      res.end("End");
+      console.log("Text: " + text);
       db.close();		
   });  //end connect
-
-  // search after connection?
-
+  res.end("End");
 }).listen(port);
