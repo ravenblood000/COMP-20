@@ -17,11 +17,10 @@ http.createServer(function (req, res)
     if(err) {console.log("Connection err: " + err); return;}
       var dbo = db.db("HW12");
       var coll = dbo.collection("companies");
-      results = text;
+      res.write("Heeeeyyyy...." + text);
       db.close();		
   });  //end connect
 
   // search after connection?
-  res.write("Heeeeyyyy...." + text);
   res.end();
 }).listen(port);
