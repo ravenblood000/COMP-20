@@ -17,15 +17,15 @@ http.createServer(function (req, res)
     if(err) {console.log("Connection err: " + err); return;}
       var dbo = db.db("HW12");
       var coll = dbo.collection("companies");
-      theQuery = {$or [{"company": text},{"ticker": text}]};
+      theQuery = {$or: [{"company":"FLWS"},{"ticker":"FLWS"}]};
       coll.find(theQuery).toArray(function(err, items)
       {
 	if (err) {console.log("Error: " + err);} 
 	else 
 	{
           console.log("Items: ");
-	  for (i=0; i<items.length; i++)
-	    console.log(i + ": " + items[i].title + " by: " + items[i].author);				
+	  for (i = 0; i < items.length; i++)
+	    console.log(i + ": " + items[i].company + " by: " + items[i].ticker);				
 	}   
 
       db.close();		
