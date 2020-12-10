@@ -1,6 +1,5 @@
 var http = require('http');
 var url = require('url');
-var port = process.env.PORT || 3000;
 const MongoClient = require('mongodb').MongoClient;
 const MongoURL = "mongodb+srv://23lalickerk:Bobbin101!@cluster0.cl1u9.mongodb.net/HW12?retryWrites=true&w=majority";
 
@@ -17,7 +16,7 @@ http.createServer(function (req, res)
     res.write(s);
     res.end();
   });      
-}).listen(port);
+}).listen(8080);
 
 async function doit(input, rad)
 {
