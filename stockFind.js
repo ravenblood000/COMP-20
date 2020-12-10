@@ -1,6 +1,6 @@
 var http = require('http');
 var url = require('url');
-var port = process.env.PORT || 3000;
+//var port = process.env.PORT || 3000;
 const MongoClient = require('mongodb').MongoClient;
 const MongoURL = "mongodb+srv://23lalickerk:Bobbin101!@cluster0.cl1u9.mongodb.net/?retryWrites=true&w=majority";
 var text = "";
@@ -17,8 +17,18 @@ http.createServer(function (req, res)
     if(err) {console.log("Connection err: " + err); return;}
       var dbo = db.db("HW12");
       var coll = dbo.collection("companies");
-      console.log("Text: " + text);
+      theQuery = {$or {"company": text},{"ticker": text}}
+      coll.find(theQuery).toArray(function(err, items)
+      {
+	if (err) {console.log("Error: " + err);} 
+	else 
+	{
+          console.log("Items: ");
+	  for (i=0; i<items.length; i++)
+	    console.log(i + ": " + items[i].title + " by: " + items[i].author);				
+	}   
+
       db.close();		
   });  //end connect
   res.end("End");
-}).listen(port);
+}).listen(8080);
