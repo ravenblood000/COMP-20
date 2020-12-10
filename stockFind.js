@@ -6,18 +6,19 @@ const MongoURL = "mongodb+srv://23lalickerk:Bobbin101!@cluster0.cl1u9.mongodb.ne
 var text = "";
 var results = "";
 
-http.createServer(function (req, res)
+/* http.createServer(function (req, res)
 {
   res.writeHead(200, {'Content-Type': 'text/html'});
   var qobj = url.parse(req.url, true).query;
   text = qobj.search;
-  
+*/  
   MongoClient.connect(MongoURL, {useUnifiedTopology: true}, function(err, db)
   {
     if(err) {console.log("Connection err: " + err); return;}
       var dbo = db.db("HW12");
       var coll = dbo.collection("companies");
-      theQuery = {$or: [{"company":"FLWS"},{"ticker":"FLWS"}]};
+      
+      theQuery = {$or: [{"company": text},{"ticker": text}]}
       coll.find(theQuery).toArray(function(err, items)
       {
 	if (err) {console.log("Error: " + err);} 
@@ -30,5 +31,5 @@ http.createServer(function (req, res)
 
       db.close();		
   });  //end connect
-  res.end("End");
-}).listen(8080);
+//  res.end("End");
+//}).listen(8080);
