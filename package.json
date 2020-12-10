@@ -3,24 +3,20 @@
     "version": "1.0.0",
     "description": "node app ",
     "main": "stockFind.js",
-    "scripts":
-    {
+    "scripts": {
         "start": "node stockFind.js"
     },
-    "repository":
-    {
+    "repository": {
         "type": "git",
         "url": ""
     },
     "author": "",
     "license": "ISC",
-    "bugs":
-    {
+    "bugs": {
         "url": ""
     },
     "homepage": "",
-    "dependencies":
-    {
-        "mongodb": "*"
+    "dependencies": {
+        "mongodb": "^3.6.3"
     }
 }
