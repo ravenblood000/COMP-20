@@ -22,6 +22,6 @@ http.createServer(function (req, res)
   });  //end connect
 
   // search after connection?
-  res.write("Heeeeyyyy...." + results);
+  res.write("Heeeeyyyy...." + text);
   res.end();
 }).listen(port);
