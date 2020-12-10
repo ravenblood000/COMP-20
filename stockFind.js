@@ -17,7 +17,7 @@ http.createServer(function (req, res)
     if(err) {console.log("Connection err: " + err); return;}
       var dbo = db.db("HW12");
       var coll = dbo.collection("companies");
-      theQuery = {$or {"company": text},{"ticker": text}}
+      theQuery = {$or [{"company": text},{"ticker": text}]};
       coll.find(theQuery).toArray(function(err, items)
       {
 	if (err) {console.log("Error: " + err);} 
