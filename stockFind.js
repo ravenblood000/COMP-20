@@ -3,8 +3,8 @@ var url = require('url');
 var port = process.env.PORT || 3000;
 const MongoClient = require('mongodb').MongoClient;
 const MongoURL = "mongodb+srv://23lalickerk:Bobbin101!@cluster0.cl1u9.mongodb.net/?retryWrites=true&w=majority";
-var text;
-var results;
+var text = "";
+var results = "";
 
 http.createServer(function (req, res)
 {
